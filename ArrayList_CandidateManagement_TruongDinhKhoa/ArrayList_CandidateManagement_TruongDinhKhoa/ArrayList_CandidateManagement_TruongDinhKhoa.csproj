@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="candidateprofile.jpg" />
+    <None Remove="jobposting.jpg" />
+    <None Remove="loginwindow.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CandidateManagement_Services\CandidateManagement_Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="candidateprofile.jpg" />
+    <Resource Include="jobposting.jpg" />
+    <Resource Include="loginwindow.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\CandidateProfile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HRAccount.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\JobPosting.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
